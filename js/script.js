@@ -53,8 +53,6 @@ const options = {
         toText.value = res.data.translations[0].translatedText;
         toText.setAttribute("placeholder", "Translation");
     });
-    console.log([selectTag[0].value, selectTag[1].value, fromText.value.trim(), selectTag, icons, translateBtn
-    ])
 });
 
 icons.forEach(icon => {
