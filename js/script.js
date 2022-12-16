@@ -48,10 +48,8 @@ const options = {
 };
     if(!text) return;
     toText.setAttribute("placeholder", "Translating...");
-//     let apiUrl = 'https://google-translate1.p.rapidapi.com/language/translate/v2';
-    let apiUrl = 'https://google-translate1.p.rapidapi.com/language/translate/v2/detect';
+    let apiUrl = 'https://google-translate1.p.rapidapi.com/language/translate/v2';
     fetch(apiUrl, options).then(res => res.json()).then(res => {
-	console.log(`translastion response is ${res.data.translatations}`)
         toText.value = res.data.translations[0].translatedText;
         toText.setAttribute("placeholder", "Translation");
     });
